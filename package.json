@@ -1,12 +1,13 @@
 {
-  "name": "sui",
+  "name": "@laurawebdev/sui",
   "description": "A modern Vue 3 component library",
   "author": {
     "name": "Laura Sofia Heimann",
     "url": "https://laura.media"
   },
   "repository": {
-    "url": "https://github.com/LauraWebdev/sui"
+    "type": "git",
+    "url": "https://github.com/LauraWebdev/sui.git"
   },
   "private": false,
   "version": "1.0.0",
