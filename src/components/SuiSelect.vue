@@ -8,21 +8,29 @@
         :class="`${disabled ? 'disabled' : ''}`"
     >
         <div @click="toggleDropdown" class="button">
-            <span :class="`icon ${iconPrefix}${options.find(x => x.value === modelValue)?.icon}`"></span>
-            <span class="value">{{ options.find(x => x.value === modelValue)?.label || 'Select' }}</span>
+            <span :class="`icon ${iconPrefix}${options[modelValue]?.icon}`" v-if="options[modelValue].icon"></span>
+            <span class="value">{{ options[modelValue]?.label || 'Select' }}</span>
             <span :class="`icon ${showDropdown ? iconPrefix + iconArrowUp : iconPrefix + iconArrowDown }`"></span>
         </div>
         <transition name="sui-scale">
             <div v-show="showDropdown" class="options">
-                <div
-                    v-for="option in options"
-                    :key="option.value"
-                    @click="selectOption(option.value)"
-                    :class="`option ${modelValue === option.value ? 'selected' : ''}`"
+                <template
+                    v-for="(option, i) in options"
+                    :key="i"
                 >
-                    <span :class="`icon ${iconPrefix}${option.icon}`"></span>
-                    <span class="label">{{ option.label }}</span>
-                </div>
+                    <div
+                        v-if="option?.spacer ?? false"
+                        class="spacer"
+                    ></div>
+                    <div
+                        v-else
+                        @click="selectOption(i)"
+                        :class="`option ${modelValue === i ? 'selected' : ''}`"
+                    >
+                        <span :class="`icon ${iconPrefix}${option.icon}`" v-if="option.icon"></span>
+                        <span class="label">{{ option.label }}</span>
+                    </div>
+                </template>
             </div>
         </transition>
     </div>
@@ -36,7 +44,7 @@ const iconArrowUp = inject('SuiIconArrowUp');
 const iconArrowDown = inject('SuiIconArrowDown');
 
 const props = defineProps({
-    modelValue: Number,
+    modelValue: [Number, String],
     options: {
         type: Array,
         required: true,
@@ -49,7 +57,7 @@ const props = defineProps({
 
 const DOMDropdown = ref(null);
 const showDropdown = ref(false);
-const selectedValue = ref(props.modelValue);
+const selectedIndex = ref(props.modelValue);
 const emit = defineEmits(['update:modelValue']);
 
 const toggleDropdown = () => {
@@ -59,7 +67,7 @@ const toggleDropdown = () => {
 
 const selectOption = (value) => {
     if(props.disabled) return;
-    selectedValue.value = value;
+    selectedIndex.value = value;
     emit('update:modelValue', value);
     showDropdown.value = false;
 };
@@ -111,18 +119,22 @@ const closeDropdown = () => {
     }
     & .options {
         position: absolute;
-        width: 100%;
+        min-width: 100%;
         background: rgb(var(--sui-colors-base-2));
         color: rgb(var(--sui-colors-base-text));
         z-index: 50;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
+        border-radius: 4px;
         overflow: hidden;
 
+        & .spacer {
+            height: 2px;
+            background: rgba(var(--sui-colors-base-text), 0.14);
+            margin: 5px 10px;
+            border-radius: 10px;
+        }
         & .option {
             cursor: pointer;
-            display: grid;
-            grid-template-columns: 24px auto;
+            display: flex;
             gap: 10px;
             align-items: center;
             color: rgb(var(--sui-colors-base-text));
@@ -142,6 +154,10 @@ const closeDropdown = () => {
                 font-family: var(--sui-font-family);
                 color: rgba(var(--sui-colors-base-text), 0.6);
                 font-size: 1rem;
+                flex-grow: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             
             &.selected {

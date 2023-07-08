@@ -1,9 +1,9 @@
 # SuiSwitch
 
 ### Props
-| Prop       | Default   | Explaination              |
-|------------|-----------|---------------------------|
-| `disabled` | `false`   | Disables user interaction |
+| Prop       | Default | Explaination              |
+|------------|---------|---------------------------|
+| `disabled` | `false` | Disables user interaction |
 
 :::info
 This component interfaces via `v-model`

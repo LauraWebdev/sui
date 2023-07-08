@@ -3,6 +3,12 @@ title: Changelog
 ---
 
 # Changelog
+### 1.1.3
+- 🪲 Fixed styling of <Badge text="SuiSelect" type="tip" /> selected option
+- ✒️ Made `value` for <Badge text="SuiSelect" type="tip" /> optional
+- ✒️ Made `icon` for <Badge text="SuiSelect" type="tip" /> optional
+- ✒️ Added a `spacer` option for <Badge text="SuiSelect" type="tip" />
+
 ### 1.1.2
 - 🪲 Fixed min-width of <Badge text="SuiSelect" type="tip" /> being set
 - 🎨 Changed styling of <Badge text="SuiBadge" type="tip" />

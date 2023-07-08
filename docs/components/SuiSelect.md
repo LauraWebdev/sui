@@ -1,18 +1,14 @@
 # SuiSelect
 
 ### Props
-| Prop            | Default     | Explaination                  |
-|-----------------|-------------|-------------------------------|
-| `options`       |             | An array of select items      |
-| `options.value` | `undefined` | The value of this select item |
-| `options.icon`  | `undefined` | The icon of this select item  |
-| `options.label` | `undefined` | The label of this select item |
-| `disabled`      | `false`     | Disables user interaction     |
-
-### Slots
-| Slot      | Explaination                                 |
-|-----------|----------------------------------------------|
-| `default` | Actions that are displayed on the right side |
+| Prop             | Default     | Explaination                                    |
+|------------------|-------------|-------------------------------------------------|
+| `options`        |             | An array of select items                        |
+| `options.value`  | `undefined` | If defined, this item will have a value         |
+| `options.icon`   | `undefined` | If defined, this item will have an icon         |
+| `options.label`  | `undefined` | The label of this select item                   |
+| `options.spacer` | `undefined` | If defined, this item will be a seperation line |
+| `disabled`       | `false`     | Disables user interaction                       |
 
 :::info
 This component interfaces via `v-model`
@@ -27,9 +23,61 @@ This component interfaces via `v-model`
 <SuiSelect
     v-model="selectedItem"
     :options="[
-        { value: 0, icon: 'heading', label: 'Heading' },
-        { value: 1, icon: 'align-left', label: 'Text' },
-        { value: 2, icon: 'double-quotes-l', label: 'Quote' },
+        { label: 'Option 1' },
+        { label: 'Option 2' },
+        { label: 'Option 3' },
+    ]"
+/>
+```
+
+## Values
+<Example>
+    <SuiSelectExampleValues />
+</Example>
+
+```vue
+<SuiSelect
+    v-model="selectedItem"
+    :options="[
+        { value: 'opt-1', label: 'Option 1' },
+        { value: 'opt-2', label: 'Option 2' },
+        { value: 'opt-3', label: 'Option 3' },
+    ]"
+/>
+```
+
+## Icons
+<Example>
+    <SuiSelectExampleIcons />
+</Example>
+
+```vue
+<SuiSelect
+    v-model="selectedItem"
+    :options="[
+        { icon: 'heading', label: 'Heading' },
+        { icon: 'align-left', label: 'Text' },
+        { icon: 'double-quotes-l', label: 'Quote' },
+        { label: 'Option 1' },
+        { label: 'Option 2' },
+        { label: 'Option 3' },
+    ]"
+/>
+```
+
+## Spacer
+<Example>
+    <SuiSelectExampleSpacer />
+</Example>
+
+```vue
+<SuiSelect
+    v-model="selectedItem"
+    :options="[
+        { icon: 'heading', label: 'Heading' },
+        { spacer: true },
+        { icon: 'align-left', label: 'Text' },
+        { icon: 'double-quotes-l', label: 'Quote' },
     ]"
 />
 ```
@@ -39,7 +87,7 @@ This component interfaces via `v-model`
     <SuiSelect
         disabled
         :modelValue="0"
-        :options="[{ value: 0, icon: 'heading', label: 'Heading' }]"
+        :options="[{ label: 'Heading' }]"
     />
 </Example>
 
@@ -47,9 +95,9 @@ This component interfaces via `v-model`
 <SuiSelect
     v-model="selectedItem"
     :options="[
-        { value: 0, icon: 'heading', label: 'Heading' },
-        { value: 1, icon: 'align-left', label: 'Text' },
-        { value: 2, icon: 'double-quotes-l', label: 'Quote' },
+        { label: 'Heading' },
+        { label: 'Text' },
+        { label: 'Quote' },
     ]"
     disabled
 />
@@ -58,5 +106,8 @@ This component interfaces via `v-model`
 <script setup>
 import Example from './Example.vue';
 import SuiSelectExample from "./SuiSelectExample.vue";
+import SuiSelectExampleValues from "./SuiSelectExampleValues.vue";
+import SuiSelectExampleIcons from "./SuiSelectExampleIcons.vue";
+import SuiSelectExampleSpacer from "./SuiSelectExampleSpacer.vue";
 import {SuiSelect} from "../../src/components/index.js";
 </script>

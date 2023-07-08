@@ -4,7 +4,7 @@
             v-model="selectedItemIndex"
             :options="options"
         />
-        <span>{{ options[selectedItemIndex].label }}</span>
+        <span>Value: {{ options[selectedItemIndex].value }}</span>
     </div>
 </template>
 <script setup>
@@ -14,8 +14,8 @@ import SuiInput from "../../src/components/SuiInput.vue";
 
 const selectedItemIndex = ref(0);
 const options = ref([
-    { value: 0, label: 'Option 1' },
-    { value: 1, label: 'Option 2' },
-    { value: 2, label: 'Option 3' },
+    { value: 'opt-1', label: 'Option 1' },
+    { value: 'opt-2', label: 'Option 2' },
+    { value: 'opt-3', label: 'Option 3' },
 ]);
 </script>

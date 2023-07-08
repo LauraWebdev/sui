@@ -14,8 +14,11 @@ import SuiInput from "../../src/components/SuiInput.vue";
 
 const selectedItemIndex = ref(0);
 const options = ref([
-    { value: 0, label: 'Option 1' },
-    { value: 1, label: 'Option 2' },
-    { value: 2, label: 'Option 3' },
+    { icon: 'heading', label: 'Heading' },
+    { icon: 'align-left', label: 'Text' },
+    { icon: 'double-quotes-l', label: 'Quote' },
+    { label: 'Option 1' },
+    { label: 'Option 2' },
+    { label: 'Option 3' },
 ]);
 </script>

@@ -39,6 +39,7 @@ defineProps({
 .sui-input {
     display: grid;
     gap: 10px;
+    width: 100%;
 
     &.horizontal {
         grid-template-columns: 1fr 2fr;
@@ -69,7 +70,7 @@ defineProps({
     & .input {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
 
         & input[type=text], & input[type=url], & input[type=password], & input[type=number] {
             width: 100%;
@@ -130,7 +131,7 @@ defineProps({
     }
     &:not(.actions) {
         & .input {
-            & *:nth-child(1) {
+            & > *:nth-child(1) {
                 flex-grow: 1;
             }
         }

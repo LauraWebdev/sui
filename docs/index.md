@@ -1,4 +1,5 @@
 ---
+title: Sofia's User Interface
 layout: home
 
 hero:
