@@ -36,7 +36,7 @@ const iconArrowUp = inject('SuiIconArrowUp');
 const iconArrowDown = inject('SuiIconArrowDown');
 
 const props = defineProps({
-    modelValue: String,
+    modelValue: Number,
     options: {
         type: Array,
         required: true,
@@ -72,7 +72,6 @@ const closeDropdown = () => {
 <style lang="scss" scoped>
 .sui-select {
     position: relative;
-    min-width: 175px;
     transition: 0.15s ease-in-out all;
     
     & .button {

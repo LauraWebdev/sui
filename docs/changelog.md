@@ -3,6 +3,10 @@ title: Changelog
 ---
 
 # Changelog
+### 1.1.2
+- 🪲 Fixed min-width of <Badge text="SuiSelect" type="tip" /> being set
+- 🎨 Changed styling of <Badge text="SuiBadge" type="tip" />
+
 ### 1.1.1
 - 🪲 Fixed CSS imports
 

@@ -34,6 +34,7 @@ const syncTheme = () => {
 <style lang="scss" scoped>
 .example {
     border: 1px solid rgba(0,0,0,0.14);
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
     min-height: 100px;
@@ -49,10 +50,15 @@ const syncTheme = () => {
         z-index: 2;
         font-size: 12px;
         font-weight: 500;
-        color: var(--vp-c-code-dimm);
+        color: rgba(0,0,0,0.35);
     }
 }
 :root.dark .example {
     border: 1px solid rgba(255,255,255,0.14);
+    background: #111;
+
+    & > span.label {
+        color: rgba(255,255,255,0.35);
+    }
 }
 </style>

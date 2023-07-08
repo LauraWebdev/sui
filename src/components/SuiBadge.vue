@@ -37,20 +37,20 @@ defineProps({
     line-height: 1rem;
 
     &.color-default {
-        background: rgba(var(--sui-colors-base-text), 0.07);
+        background: rgb(var(--sui-colors-base-2));
         color: rgb(var(--sui-colors-base-text));
     }
     &.color-primary {
-        background: rgba(var(--sui-colors-primary),1);
-        color: rgb(var(--sui-colors-base));
+        background: rgba(var(--sui-colors-primary),0.14);
+        color: rgb(var(--sui-colors-primary));
     }
     &.color-danger {
-        background: rgba(var(--sui-colors-error),1);
-        color: rgb(var(--sui-colors-base));
+        background: rgba(var(--sui-colors-error),0.14);
+        color: rgb(var(--sui-colors-error));
     }
     &.color-success {
-        background: rgba(var(--sui-colors-success),1);
-        color: rgb(var(--sui-colors-base));
+        background: rgba(var(--sui-colors-success),0.14);
+        color: rgb(var(--sui-colors-success));
     }
     &.color-inverse {
         background: rgba(var(--sui-colors-base-text),1);
