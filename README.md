@@ -14,27 +14,27 @@ npm install
 
 #### Building the library
 ```shell
-npm run build:library
+npm run lib:build
 ```
 
 #### Publish the library
 ```shell
-npm run publish:library
+npm run lib:publish
 ```
 
 ---
 
 #### Starting the documentation dev server
 ```shell
-npm run dev
+npm run docs:dev
 ```
 
 #### Starting the documentation server
 ```shell
-npm run serve
+npm run docs:serve
 ```
 
 #### Building the documentation
 ```shell
-npm run build
+npm run docs:build
 ```

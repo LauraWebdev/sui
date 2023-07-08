@@ -29,11 +29,11 @@
   "unpkg": "./dist/sui.umd.js",
   "jsdelivr": "./dist/sui.umd.js",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
-    "build:library": "rimraf dist && vite build",
-    "publish:library": "npm publish --access public"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "lib:build": "rimraf dist && vite build",
+    "lib:publish": "npm publish --access public"
   },
   "peerDependencies": {
     "vue": "^3.3.4"
