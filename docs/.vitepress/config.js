@@ -2,6 +2,7 @@ export default  {
     lang: 'en-US',
     title: 'Sui',
     description: 'A modern Vue 3 component library',
+    base: "/sui/",
     themeConfig: {
         search: {
             provider: 'local'
