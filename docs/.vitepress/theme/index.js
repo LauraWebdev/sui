@@ -5,9 +5,11 @@ import 'remixicon/fonts/remixicon.css';
 export default {
     extends: DefaultTheme,
     enhanceApp(context) {
-        context.app.use(Sui, {
-            theme: Themes.Dark,
-            icons: Icons.Remixicon,
-        });
+        if (!import.meta.env.SSR) {
+            context.app.use(Sui, {
+                theme: Themes.Dark,
+                icons: Icons.Remixicon,
+            });
+        }
     }
 }

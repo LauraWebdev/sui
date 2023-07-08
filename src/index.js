@@ -36,11 +36,14 @@ export const Sui = {
 }
 
 const setThemeVariables = (inputObject, parentKey = '') => {
+    const root = document?.documentElement ?? null;
+    if(root === null) return;
+
     for (let key in inputObject) {
         if (typeof inputObject[key] === 'object' && inputObject[key] !== null) {
             setThemeVariables(inputObject[key], parentKey + key + '-');
         } else {
-            document.documentElement.style.setProperty('--sui-' + parentKey + key, inputObject[key]);
+            root.style.setProperty('--sui-' + parentKey + key, inputObject[key]);
         }
     }
 }

@@ -11,7 +11,6 @@ import {Themes} from "../../src/index.js";
 import {inject, onMounted} from "vue";
 
 const suiSetTheme = inject('SuiSetTheme');
-const rootElement = document.documentElement;
 
 onMounted(() => {
     const switcherElement = document.querySelector("button.VPSwitch.VPSwitchAppearance");
@@ -23,6 +22,7 @@ onMounted(() => {
 });
 
 const syncTheme = () => {
+    const rootElement = document.documentElement;
     if(rootElement.classList.contains("dark")) {
         suiSetTheme(Themes.Dark);
     } else {
