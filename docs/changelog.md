@@ -3,6 +3,9 @@ title: Changelog
 ---
 
 # Changelog
+### 1.1.1
+- 🪲 Fixed CSS imports
+
 ### 1.1.0
 - 🆕 Added <Badge text="Icons.FontAwesome" type="tip" />
 - 🆕 Added <Badge text="SuiBadge" type="tip" />

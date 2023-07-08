@@ -21,7 +21,7 @@ export default defineConfig({
             external: ['vue'],
             output: {
                 assetFileNames: (assetInfo) => {
-                    if (assetInfo.name === 'main.css') return 'sui.css';
+                    if (assetInfo.name === 'style.css') return 'sui.css';
                     return assetInfo.name;
                 },
                 exports: "named",

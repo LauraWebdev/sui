@@ -17,3 +17,8 @@ app.use(Sui, {
     icons: Icons.Remixicon,
 });
 ```
+
+You will also need to import the `sui.css` stylings in your project
+```js
+import "@laurawebdev/sui/dist/sui.css";
+```
