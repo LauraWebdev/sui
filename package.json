@@ -10,7 +10,7 @@
     "url": "https://github.com/LauraWebdev/sui.git"
   },
   "private": false,
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "module",
   "files": [
     "dist"

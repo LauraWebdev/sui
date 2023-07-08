@@ -16,6 +16,7 @@ app.use(Sui, {
 Sui does not include an icon font by default. You must install them on your own.
 :::
 ### Remixicon <Badge text="Icons.Remixicon" type="tip" />
+[Website](https://remixicon.com/)
 ```
 {
     prefix: 'ri-',
@@ -26,12 +27,24 @@ Sui does not include an icon font by default. You must install them on your own.
 ```
 
 ### Material Design Icons <Badge text="Icons.MaterialDesignIcons" type="tip" />
+[Website](https://pictogrammers.com/library/mdi/)
 ```
 {
     prefix: 'mdi mdi-',
     loader: 'loading',
     arrowUp: 'menu-up',
     arrowDown: 'menu-down',
+}
+```
+
+### Font Awesome <Badge text="Icons.FontAwesome" type="tip" />
+[Website](https://fontawesome.com/)
+```
+{
+    prefix: 'fa-solid fa-',
+    loader: 'spinner',
+    arrowUp: 'chevron-up',
+    arrowDown: 'chevron-down',
 }
 ```
 

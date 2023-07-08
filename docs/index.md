@@ -1,22 +1,28 @@
 ---
-title: Introduction
----
+layout: home
 
-# Sui - Sofia's User Interface
-## Introduction
+hero:
+  name: Sui
+  text: Sofia's User Interface
+  tagline: A modern Vue 3 component library
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /getting-started
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/laurawebdev/sui
 
-Sui, short for "Sofia's User Interface", is a powerful Vue3 component library crafted by developer Laura Sofia Heimann. It offers a compact, modern collection of reusable UI components, designed with simplicity and efficiency at its core.
-
-Built for developers, by a developer, Sui enables you to construct interactive, engaging interfaces with less effort. The library houses a diverse array of components that cater to a multitude of UI demands, all seamlessly integrable into your Vue3 projects.
-
----
-
-🔄 Reusable
-
-💡 Simple
-
-🎛️ Customizable 
-
-📦 Modular 
-
-🎨 Themable
+features:
+  - icon: 💡
+    title: Simple
+  - icon: 🎛️
+    title: Customizable
+  - icon: 📦
+    title: Modular
+  - icon: 🎨
+    title: Themable
+  - icon: 🔄
+    title: Reusable
+  - icon: 👩‍💻
+    title: Production-ready

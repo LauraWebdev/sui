@@ -4,11 +4,16 @@ export default  {
     description: 'A modern Vue 3 component library',
     base: "/sui/",
     themeConfig: {
+        siteTitle: 'Sui - Sofia\'s User Interface',
         search: {
             provider: 'local'
         },
         docsDir: 'docs',
         nav: [
+            {
+                text: 'Changelog',
+                link: '/changelog',
+            },
             {
                 text: 'Github',
                 link: 'https://github.com/LauraWebdev/sui',
@@ -44,7 +49,15 @@ export default  {
                 items: getComponents(),
             },
         ],
+        editLink: {
+            pattern: 'https://github.com/laurawebdev/sui/edit/main/docs/:path'
+        },
+        footer: {
+            message: 'Released under the <a href="https://github.com/laurawebdev/sui/blob/main/LICENSE">MIT License</a>.',
+            copyright: 'Copyright © 2023 &mdash; <a href="https://laura.media">Laura Sofia Heimann</a>'
+        }
     },
+    lastUpdated: true
 }
 
 function getComponents() {
@@ -57,5 +70,6 @@ function getComponents() {
         { text: 'SuiSwitch', link: '/components/SuiSwitch' },
         { text: 'SuiTabBar', link: '/components/SuiTabBar' },
         { text: 'SuiTabItem', link: '/components/SuiTabItem' },
+        { text: 'SuiBadge', link: '/components/SuiBadge' },
     ]
 }

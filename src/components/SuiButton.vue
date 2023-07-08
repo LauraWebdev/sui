@@ -133,7 +133,7 @@ defineProps({
         background: rgba(var(--sui-colors-success),0.2);
         color: rgb(var(--sui-colors-success));
     }
-    &.color-bright {
+    &.color-inverse {
         background: rgba(var(--sui-colors-base-text),0.8);
         color: rgb(var(--sui-colors-base));
     }
@@ -158,7 +158,7 @@ defineProps({
         &.color-success {
             background: rgba(var(--sui-colors-success),0.35);
         }
-        &.color-bright {
+        &.color-inverse {
             background: rgb(var(--sui-colors-base-text));
         }
         &.color-transparent {
@@ -183,7 +183,7 @@ defineProps({
         &.color-success {
             background: rgba(var(--sui-colors-success),0.5);
         }
-        &.color-bright {
+        &.color-inverse {
             background: rgb(var(--sui-colors-base-text));
         }
         &.color-transparent {

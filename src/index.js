@@ -1,6 +1,7 @@
 import "./main.css";
 
 import {
+    SuiBadge,
     SuiButton,
     SuiHeader,
     SuiInput,
@@ -21,6 +22,7 @@ export const Sui = {
         app.component('SuiTabItem', SuiTabItem);
         app.component('SuiInput', SuiInput);
         app.component('SuiSelect', SuiSelect);
+        app.component('SuiBadge', SuiBadge);
 
         app.provide('SuiIconPrefix', options?.icons?.prefix ?? '');
         app.provide('SuiIconLoader', options?.icons?.loader ?? '');
@@ -89,5 +91,11 @@ export const Icons = {
         loader: 'loading',
         arrowUp: 'menu-up',
         arrowDown: 'menu-down',
+    },
+    FontAwesome: {
+        prefix: 'fa-solid fa-',
+        loader: 'spinner',
+        arrowUp: 'chevron-up',
+        arrowDown: 'chevron-down',
     }
 }

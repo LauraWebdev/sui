@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme';
 import {Icons, Sui, Themes} from "../../../src/index.js";
 import 'remixicon/fonts/remixicon.css';
+import './theme.css';
 
 export default {
     extends: DefaultTheme,

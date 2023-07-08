@@ -6,3 +6,4 @@ export { default as SuiTabBar} from "./SuiTabBar.vue";
 export { default as SuiTabItem} from "./SuiTabItem.vue";
 export { default as SuiInput} from "./SuiInput.vue";
 export { default as SuiSelect} from "./SuiSelect.vue";
+export { default as SuiBadge} from "./SuiBadge.vue";

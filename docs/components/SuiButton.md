@@ -184,10 +184,10 @@
 <Example>
     <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center">
         <SuiButton
-            v-for="color in ['default', 'bright', 'primary', 'danger', 'success', 'transparent']"
+            v-for="color in ['default', 'inverse', 'primary', 'danger', 'success', 'transparent']"
             :color="color"
             icon="settings-line"
-            :label="color[0].toUpperCase() + color.slice(1, color.length)"
+            :label="color"
         />
     </div>
 </Example>
@@ -203,7 +203,7 @@
 
 ```vue
 <SuiButton
-    color="bright"
+    color="inverse"
     icon="settings-line"
     label="Hello World"
     @click="handleClick"
