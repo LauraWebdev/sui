@@ -1,0 +1,49 @@
+{
+  "name": "sui",
+  "description": "A modern Vue 3 component library",
+  "author": {
+    "name": "Laura Sofia Heimann",
+    "url": "https://laura.media"
+  },
+  "repository": {
+    "url": "https://github.com/LauraWebdev/sui"
+  },
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/sui.umd.js",
+  "module": "./dist/sui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/sui.es.js",
+      "require": "./dist/sui.umd.js"
+    },
+    "./dist/sui.css": {
+      "import": "./dist/sui.css",
+      "require": "./dist/sui.css"
+    }
+  },
+  "unpkg": "./dist/sui.umd.js",
+  "jsdelivr": "./dist/sui.umd.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "build:library": "rimraf dist && vite build",
+    "publish:library": "npm publish --access public"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "remixicon": "^3.4.0",
+    "rimraf": "^5.0.1",
+    "sass": "^1.63.6",
+    "vite": "^4.4.0",
+    "vitepress": "^1.0.0-beta.5"
+  }
+}
