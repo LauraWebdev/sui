@@ -3,6 +3,8 @@ title: Changelog
 ---
 
 # Changelog
+### 1.1.4
+- ✒️ Made <Badge text="SuiSelect" type="tip" /> emit the `change` event
 ### 1.1.3
 - 🪲 Fixed styling of <Badge text="SuiSelect" type="tip" /> selected option
 - ✒️ Made `value` for <Badge text="SuiSelect" type="tip" /> optional

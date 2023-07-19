@@ -58,7 +58,7 @@ const props = defineProps({
 const DOMDropdown = ref(null);
 const showDropdown = ref(false);
 const selectedIndex = ref(props.modelValue);
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:modelValue', 'change']);
 
 const toggleDropdown = () => {
     if(props.disabled) return;
@@ -69,6 +69,7 @@ const selectOption = (value) => {
     if(props.disabled) return;
     selectedIndex.value = value;
     emit('update:modelValue', value);
+    emit('change', value);
     showDropdown.value = false;
 };
 
