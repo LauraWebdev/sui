@@ -246,6 +246,50 @@
 />
 ```
 
+## Badge
+<Example>
+    <div style="display: flex; gap: 10px;">
+        <SuiButton
+            color="transparent"
+            badge
+            icon="loop-right-line"
+        />
+        <SuiButton
+            color="transparent"
+            badge="99"
+            icon="loop-right-line"
+        />
+        <SuiButton
+            color="transparent"
+            mini
+            badge
+            icon="loop-right-line"
+        />
+        <SuiButton
+            color="transparent"
+            mini
+            badge="99"
+            icon="loop-right-line"
+        />
+    </div>
+</Example>
+
+```vue
+<SuiButton
+    badge
+    icon="loop-right-line"
+    @click="handleClick"
+/>
+```
+
+```vue
+<SuiButton
+    badge="99"
+    icon="loop-right-line"
+    @click="handleClick"
+/>
+```
+
 <script setup>
 import Example from './Example.vue';
 import {SuiButton} from "../../src/components/index.js";

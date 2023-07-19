@@ -3,6 +3,10 @@ title: Changelog
 ---
 
 # Changelog
+### 1.2.0
+- 🆕 Added `badge` to <Badge text="SuiButton" type="tip" />
+- 🪲 Fixed rendering error when <Badge text="SuiSelect" type="tip" /> has no selected option
+
 ### 1.1.4
 - ✒️ Made <Badge text="SuiSelect" type="tip" /> emit the `change` event
 ### 1.1.3

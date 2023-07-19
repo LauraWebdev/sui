@@ -8,6 +8,13 @@
         <span v-if="loading" :class="`loading icon ${iconPrefix}${iconLoader}`"></span>
         <span v-if="icon && !loading" :class="`icon ${iconPrefix}${icon}`"></span>
         <span v-if="label" class="label">{{ label }}</span>
+        <span
+            v-if="badge !== false"
+            class="badge"
+            :class="badge ? 'has-text' : ''"
+        >
+            {{ badge }}
+        </span>
     </button>
 </template>
 
@@ -46,7 +53,11 @@ defineProps({
     color: {
         type: String,
         default: 'default',
-    }
+    },
+    badge: {
+        type: [String, Boolean],
+        default: false,
+    },
 });
 </script>
 
@@ -97,11 +108,45 @@ defineProps({
     &.reversed {
         flex-direction: row-reverse;
     }
+    & .badge {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        min-width: 10px;
+        min-height: 10px;
+        border-radius: 6px;
+        background: rgb(var(--sui-colors-primary));
+        border: 2px solid rgb(var(--sui-colors-base));
+        line-height: 1rem;
+
+        &.has-text {
+            bottom: 3px;
+            right: 3px;
+            min-width: 18px;
+            padding: 0 2px;
+            height: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.5rem;
+            overflow: hidden;
+        }
+    }
     &.mini {
         height: 30px;
         padding: 0 7px;
         gap: 3px;
-        
+
+        & .badge {
+            bottom: 5px;
+            right: 5px;
+
+            &.has-text {
+                bottom: 0;
+                right: 0;
+            }
+        }
         & .icon {
             width: 20px;
             height: 20px;

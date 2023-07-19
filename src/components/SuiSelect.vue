@@ -5,11 +5,11 @@
         @focusout="closeDropdown"
         tabindex="0"
         class="sui sui-select"
-        :class="`${disabled ? 'disabled' : ''}`"
+        :class="`${disabled ? 'disabled' : ''} ${mini ? 'mini' : ''}`"
     >
         <div @click="toggleDropdown" class="button">
-            <span :class="`icon ${iconPrefix}${options[modelValue]?.icon}`" v-if="options[modelValue].icon"></span>
-            <span class="value">{{ options[modelValue]?.label || 'Select' }}</span>
+            <span :class="`icon ${iconPrefix}${options[modelValue]?.icon}`" v-if="modelValue !== null && options[modelValue].icon"></span>
+            <span class="value">{{ modelValue !== null ? options[modelValue]?.label : 'Select' }}</span>
             <span :class="`icon ${showDropdown ? iconPrefix + iconArrowUp : iconPrefix + iconArrowDown }`"></span>
         </div>
         <transition name="sui-scale">
@@ -50,6 +50,10 @@ const props = defineProps({
         required: true,
     },
     disabled: {
+        type: Boolean,
+        default: false,
+    },
+    mini: {
         type: Boolean,
         default: false,
     },
@@ -166,6 +170,42 @@ const closeDropdown = () => {
             }
             &:hover {
                 background: rgb(var(--sui-colors-base-3));
+            }
+        }
+    }
+    &.mini {
+        & .button {
+            height: 30px;
+            padding: 0 7px;
+            gap: 5px;
+
+            & .icon {
+                width: 20px;
+                height: 20px;
+                font-size: 15px;
+            }
+            & .value {
+                font-size: 0.85rem;
+            }
+        }
+        & .options {
+            & .spacer {
+                height: 1px;
+                margin: 5px 5px;
+            }
+            & .option {
+                height: 30px;
+                padding: 0 7px;
+                gap: 5px;
+
+                & .icon {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 15px;
+                }
+                & .label {
+                    font-size: 0.85rem;
+                }
             }
         }
     }

@@ -82,6 +82,27 @@ This component interfaces via `v-model`
 />
 ```
 
+## Mini
+<Example>
+    <SuiSelectExampleMini />
+</Example>
+
+```vue
+<SuiSelect
+    v-model="selectedItem"
+    mini
+    :options="[
+        { icon: 'heading', label: 'Heading' },
+        { icon: 'align-left', label: 'Text' },
+        { icon: 'double-quotes-l', label: 'Quote' },
+        { spacer: true },
+        { label: 'Option 1' },
+        { label: 'Option 2' },
+        { label: 'Option 3' },
+    ]"
+/>
+```
+
 ## Disabled
 <Example>
     <SuiSelect
@@ -108,6 +129,7 @@ import Example from './Example.vue';
 import SuiSelectExample from "./SuiSelectExample.vue";
 import SuiSelectExampleValues from "./SuiSelectExampleValues.vue";
 import SuiSelectExampleIcons from "./SuiSelectExampleIcons.vue";
+import SuiSelectExampleMini from "./SuiSelectExampleMini.vue";
 import SuiSelectExampleSpacer from "./SuiSelectExampleSpacer.vue";
 import {SuiSelect} from "../../src/components/index.js";
 </script>
