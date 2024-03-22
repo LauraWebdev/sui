@@ -3,6 +3,9 @@ title: Changelog
 ---
 
 # Changelog
+### 2.0.1
+- Fixed a styling issue with `ProgressBars`
+
 ### 2.0.0
 - Reimplemented all components as framework-agnostic CSS only components
 
