@@ -3,6 +3,9 @@ title: Changelog
 ---
 
 # Changelog
+### 2.0.0
+- Reimplemented all components as framework-agnostic CSS only components
+
 ### 1.2.0
 - 🆕 Added `badge` to <Badge text="SuiButton" type="tip" />
 - 🪲 Fixed rendering error when <Badge text="SuiSelect" type="tip" /> has no selected option
