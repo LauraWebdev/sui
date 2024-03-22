@@ -10,7 +10,7 @@
     "url": "https://github.com/LauraWebdev/sui.git"
   },
   "private": false,
-  "version": "1.2.0",
+  "version": "2.0.0",
   "type": "module",
   "files": [
     "dist"
@@ -46,5 +46,8 @@
     "sass": "^1.63.6",
     "vite": "^4.4.0",
     "vitepress": "^1.0.0-beta.5"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.0.19"
   }
 }

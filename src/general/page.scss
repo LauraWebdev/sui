@@ -1,0 +1,10 @@
+body {
+    background: rgb(var(--color-base-900));
+    color: rgb(var(--color-base-100));
+}
+.wrapper {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: grid;
+}

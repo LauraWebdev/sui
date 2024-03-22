@@ -34,14 +34,6 @@ export default  {
                         text: 'Getting Started',
                         link: '/getting-started',
                     },
-                    {
-                        text: 'Theming',
-                        link: '/theming',
-                    },
-                    {
-                        text: 'Icons',
-                        link: '/icons',
-                    },
                 ]
             },
             {
@@ -62,14 +54,11 @@ export default  {
 
 function getComponents() {
     return [
-        { text: 'SuiButton', link: '/components/SuiButton' },
-        { text: 'SuiHeader', link: '/components/SuiHeader' },
-        { text: 'SuiInput', link: '/components/SuiInput' },
-        { text: 'SuiLoader', link: '/components/SuiLoader' },
-        { text: 'SuiSelect', link: '/components/SuiSelect' },
-        { text: 'SuiSwitch', link: '/components/SuiSwitch' },
-        { text: 'SuiTabBar', link: '/components/SuiTabBar' },
-        { text: 'SuiTabItem', link: '/components/SuiTabItem' },
-        { text: 'SuiBadge', link: '/components/SuiBadge' },
+        { text: 'Buttons', link: '/components/Buttons' },
+        { text: 'Inputs', link: '/components/Inputs' },
+        { text: 'Toggles', link: '/components/Toggles' },
+        { text: 'Tabs', link: '/components/Tabs' },
+        { text: 'Badges', link: '/components/Badges' },
+        { text: 'ProgressBars', link: '/components/ProgressBars' },
     ]
 }

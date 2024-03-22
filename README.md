@@ -1,5 +1,5 @@
 # Sui - Sofia's User Interface
-Sui, short for "Sofia's User Interface", is a powerful Vue3 component library crafted by developer Laura Sofia Heimann.
+Sui, short for "Sofia's User Interface", is a powerful framework-agnostic component library crafted by developer Laura Sofia Heimann.
 
 ### Documentation
 To learn more, visit our [documentation](https://laurawebdev.github.io/sui)!

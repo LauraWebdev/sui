@@ -5,7 +5,7 @@ layout: home
 hero:
   name: Sui
   text: Sofia's User Interface
-  tagline: A modern Vue 3 component library
+  tagline: A modern framework-agnostic component library
   actions:
     - theme: brand
       text: Get Started

@@ -1,0 +1,62 @@
+.badge {
+    background: rgb(var(--color-base-800));
+    color: rgb(var(--color-base-100));
+    padding: 4px 7px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    --offsetLeft: unset;
+    --offsetRight: -6px;
+    --offsetTop: -6px;
+    --offsetBottom: unset;
+
+    &.left {
+        --offsetLeft: -6px;
+        --offsetRight: unset;
+    }
+    &.right {
+        --offsetLeft: unset;
+        --offsetRight: -6px;
+    }
+    &.top {
+        --offsetTop: -6px;
+        --offsetBottom: unset;
+    }
+    &.bottom {
+        --offsetTop: unset;
+        --offsetBottom: -6px;
+    }
+
+    &.primary {
+        background: rgb(var(--color-primary-800));
+        color: rgb(var(--color-primary-200));
+    }
+    &.inverse {
+        background: rgb(var(--color-base-100));
+        color: rgb(var(--color-base-800));
+    }
+    &.dot {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        background: rgb(var(--color-primary-500));
+        border-radius: 100px;
+        margin: 3px;
+    }
+}
+
+nav.tabs a .badge {
+    position: absolute;
+    left: var(--offsetLeft);
+    right: var(--offsetRight);
+    top: var(--offsetTop);
+    bottom: var(--offsetBottom);
+}
+button .badge, input[type="submit"] .badge, input[type="button"] .badge, .button .badge {
+    position: absolute;
+    left: var(--offsetLeft);
+    right: var(--offsetRight);
+    top: var(--offsetTop);
+    bottom: var(--offsetBottom);
+}

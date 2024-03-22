@@ -1,0 +1,67 @@
+input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="range"]) {
+    background: rgb(var(--color-base-700));
+    border: 0;
+    font-family: var(--font-family);
+    color: rgb(var(--color-base-100));
+    font-weight: 600;
+    font-size: 0.9rem;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 5px;
+    transition: var(--transition-default);
+    flex-grow: 1;
+
+    &:not(:disabled):hover {
+        background: rgb(var(--color-base-600));
+        cursor: text;
+    }
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+input[type="checkbox"].toggle {
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background: rgb(var(--color-base-700));
+    display: block;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition-default);
+
+    &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: rgb(var(--color-base-400));
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        border-radius: 100px;
+        transition: var(--transition-default);
+    }
+    
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    &:not(:disabled):hover {
+        background: rgb(var(--color-base-600));
+    }
+
+    &:checked {
+        background: rgba(var(--color-primary-700), 0.4);
+
+        &:hover {
+            background: rgba(var(--color-primary-700), 0.6);
+        }
+        &:before {
+            left: 29px;
+            background: rgb(var(--color-primary-300));
+        }
+    }
+}

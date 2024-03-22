@@ -1,0 +1,32 @@
+@use 'general/reset';
+@use 'general/colors';
+@use 'general/page';
+@use 'general/scrollbars';
+@use 'general/focusring';
+
+@use 'components/inputs';
+@use 'components/buttons';
+@use 'components/tabs';
+@use 'components/badges';
+@use 'components/progressbars';
+
+:root {
+    --font-size: 14px;
+    --font-family: Verdana, sans-serif;
+    --transition-default: 0.15s ease-in-out all;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: 600;
+    line-height: 1rem;
+    accent-color: rgb(var(--color-primary-500));
+}
+
+@keyframes sui-loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
