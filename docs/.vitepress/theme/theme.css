@@ -6,7 +6,20 @@
     --vp-c-brand-dark: #e83363;
     --vp-c-brand-darker: #c22b53;
     --vp-c-brand-darkest: #9c2243;
+    --vp-code-block-bg: rgb(var(--color-base-900));
 
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(135deg, var(--vp-c-brand-darker), var(--vp-c-brand-lighter));
+}
+body:not(.playground) {
+    background: rgb(var(--color-base-950)) !important;
+}
+.VPNav .wrapper {
+    display: unset;
+    max-width: unset;
+    width: auto;
+    margin: 0;
+}
+.VPNav .wrapper .content {
+    background-color: var(--vp-nav-bg-color);
 }

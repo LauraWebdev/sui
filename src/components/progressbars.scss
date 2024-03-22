@@ -1,0 +1,47 @@
+progress {
+    appearance: none;
+    position: relative;
+    height: 4px;
+    width: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(var(--color-base-800));
+    border: 0;
+
+    &::-webkit-progress-bar {
+        background: rgba(var(--color-base-800));
+    }
+    &::-webkit-progress-value, &::-moz-progress-bar {
+        background: rgba(var(--color-base-200));
+    }
+
+    &:indeterminate {
+        &::-moz-progress-bar {
+            width: 0;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 4px;
+            background: rgba(var(--color-base-200));
+            animation: sui-progress-indeterminate 1s linear infinite;
+        }
+    }
+    &.fullwidth {
+        width: 100%;
+    }
+}
+
+@keyframes sui-progress-indeterminate {
+    0% {
+        width: 100%;
+        left: -100%;
+    }
+    100% {
+        width: 100%;
+        left: 100%;
+    }
+}

@@ -3,22 +3,8 @@ title: Getting Started
 ---
 
 # Getting Started
-To use the Sui component system, you must register it in your Vue application.
+To use the Sui component system, simply import the styling to your application,
 
 ```js
-app.use(Sui);
-```
-
-You can also provide the default theme and icon system to use. To learn more about customization options, check out [Theming](/theming) and [Icons](/icons).
-
-```js
-app.use(Sui, {
-    theme: Themes.Dark,
-    icons: Icons.Remixicon,
-});
-```
-
-You will also need to import the `sui.css` stylings in your project
-```js
-import "@laurawebdev/sui/dist/sui.css";
+import 'laurawebdev/sui/dist/sui.css';
 ```
